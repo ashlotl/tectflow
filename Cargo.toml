@@ -1,8 +1,8 @@
 [workspace]
 members = [
-	"tectflow-entrypoint",
+	"tectflow_entrypoint",
 
-	"tectflow-data",
-	"tectflow-frontend",
-	"tectflow-manipulate",
+	"tectflow_data",
+	"tectflow_frontend",
+	"tectflow_manipulate",
 ]

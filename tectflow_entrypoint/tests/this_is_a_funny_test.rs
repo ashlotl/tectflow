@@ -1,0 +1,3 @@
+fn heehee() {
+    println!("heehee");
+}
