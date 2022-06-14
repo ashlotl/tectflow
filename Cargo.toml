@@ -1,0 +1,8 @@
+[workspace]
+members = [
+	"tectflow-entrypoint",
+
+	"tectflow-data",
+	"tectflow-frontend",
+	"tectflow-manipulate",
+]
