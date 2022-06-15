@@ -6,3 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tectflow_frontend = { path = "../tectflow_frontend" }# TODO: change this to use a github repo once frontend is stable
+
+[dev-dependencies]

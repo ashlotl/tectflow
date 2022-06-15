@@ -1,3 +1,4 @@
-fn heehee() {
-    println!("heehee");
+#[test]
+pub fn heehee() {
+	println!("heehee");
 }
