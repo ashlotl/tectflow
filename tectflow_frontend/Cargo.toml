@@ -7,5 +7,5 @@ edition = "2021"
 
 [dependencies]
 imgui = { version = "0.8.2" }
-imgui-winit-support = { version = "0.8.2" }
+imgui-winit-support = { version = "0.8.2", features = ["winit-26"] }
 winit = { version = "0.26.0" }
