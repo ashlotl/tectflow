@@ -1,3 +1,5 @@
+pub mod renderer;
+
 use imgui::Context;
 use imgui_winit_support::{HiDpiMode, WinitPlatform};
 use winit::{
@@ -5,6 +7,25 @@ use winit::{
 	event_loop::{ControlFlow, EventLoop},
 	window::WindowBuilder,
 };
+
+pub struct Version {
+	major: u32,
+	minor: u32,
+	patch: u32,
+}
+
+pub type FrontendAppVersion = Version;
+
+pub type FrontendEngineVersion = Version;
+
+
+pub const TECTFLOW_FRONTEND_ENGINE_NAME: &'static str = "tectflow_frontend";
+pub const TECTFLOW_FRONTEND_ENGINE_VERSION: FrontendEngineVersion =
+	FrontendEngineVersion {
+		major: 0,
+		minor: 1,
+		patch: 0,
+	};
 
 
 pub fn tectflow_window() {
