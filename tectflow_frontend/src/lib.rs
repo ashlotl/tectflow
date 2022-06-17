@@ -1,4 +1,4 @@
-use imgui::{Condition, Context};
+use imgui::Context;
 use imgui_winit_support::{HiDpiMode, WinitPlatform};
 use winit::{
 	event::{Event, WindowEvent},
@@ -24,7 +24,7 @@ pub fn tectflow_window() {
 
 	let mut imgui = Context::create();
 
-	let platform = WinitPlatform::init(&mut imgui);
+	let mut platform = WinitPlatform::init(&mut imgui);
 
 	platform.attach_window(imgui.io_mut(), &window, dpi_mode);
 
@@ -52,20 +52,16 @@ pub fn tectflow_window() {
 				let ui = imgui.frame();
 
 
-				ui.window("Hey look it's a menu")
-					.size([300.0, 110.0], Condition::FirstUseEver)
-					.build(|| {
-						ui.text_wrapped("i guess here's some text");
-						if ui.button(format!("Click me: {}", count)) {
-							count += 1;
-						}
+				ui.text_wrapped("i guess here's some text");
+				if ui.button(format!("Click me: {}", count)) {
+					count += 1;
+				}
 
-						let mouse_position = ui.io().mouse_pos;
-						ui.text(format!(
-							"{}, {}",
-							mouse_position[0], mouse_position[1]
-						));
-					});
+				let mouse_position = ui.io().mouse_pos;
+				ui.text(format!(
+					"{}, {}",
+					mouse_position[0], mouse_position[1]
+				));
 			}
 			_ => (),
 		}
