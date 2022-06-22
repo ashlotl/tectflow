@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 ash = { version = "0.37.0", features = ["linked"] }
+ash-window = { version = "0.10.0" }
 imgui = { version = "0.8.2" }
 imgui-rs-vulkan-renderer = { version = "1.3.0" }
 imgui-winit-support = { version = "0.8.2", features = ["winit-26"] }
